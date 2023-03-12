@@ -8,4 +8,5 @@ public class Const {
     public static String ROUTER_ERROR ="error";
 
     public static String MSG_ERROR_CATCH = "Error system, please contact administrator";
+    public  static String ROUTER_HOME_ADMIN = "homeAdmin";
 }

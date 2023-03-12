@@ -22,6 +22,10 @@ public class LoginAdminController {
     @Autowired
     private HttpSession httpSession;
 
+    /**
+     *
+     * @return
+     */
     @RequestMapping(value = "", method = RequestMethod.GET)
     public String LoginAdmin() {
         try {
@@ -30,14 +34,20 @@ public class LoginAdminController {
             System.out.println(Const.MSG_ERROR_CATCH);
             return Const.ROUTER_ERROR;
         }
-
     }
 
+    /**
+     *
+     * @param email
+     * @param password
+     * @param modelMap
+     * @return
+     */
     @RequestMapping(value = "login", method = RequestMethod.POST)
     public String LoginAdmin(@RequestParam("email") String email, @RequestParam("password") String password, ModelMap modelMap) {
         try {
             User existUser = userRepository.findByEmail(email);
-            if (existUser != null && HashedPassword.match(existUser.getPassword(), password)) {
+            if (existUser != null && HashedPassword.match(existUser.getPassword(), password) && existUser.isAdmin()) {
                 httpSession.setAttribute(Const.SESSION_LOGIN_ADMIN, existUser);
                 return "homeAdmin";
             } else {
@@ -50,6 +60,10 @@ public class LoginAdminController {
         }
     }
 
+    /**
+     *
+     * @return
+     */
     @RequestMapping(value = "logout", method = RequestMethod.POST)
     public String LogoutAdmin() {
         try {
