@@ -29,7 +29,6 @@ public class LoginAdminController {
     @RequestMapping(value = "", method = RequestMethod.GET)
     public String LoginAdmin() {
         try {
-            Iterable<User> exist= userRepository.findAll();
             return Const.ROUTER_LOGIN_ADMIN;
         } catch (Exception e) {
             System.out.println(Const.MSG_ERROR_CATCH);
