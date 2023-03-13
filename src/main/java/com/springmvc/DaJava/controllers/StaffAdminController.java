@@ -53,7 +53,7 @@ public class StaffAdminController {
             if (!user.isAdmin()) {
                 modelMap.addAttribute(Const.NAME_MSG_ERROR_PERMISSION, Const.MSG_ERROR_PERMISSION);
             }
-            User existUserName = userRepository.findByUser(fullName);
+            User existUserName = userRepository.findByFullName(fullName);
             if (existUserName != null) {
                 modelMap.addAttribute(Const.ERROR_REGISTER, Const.FULLNAME_ERROR);
                 return Const.ROUTER_REGISTER_AD;
@@ -94,7 +94,7 @@ public class StaffAdminController {
                 modelMap.addAttribute(Const.NAME_ERROR_USER, Const.ERROR_USER);
                 return Const.ROUTEER_UPDATE_STAFF;
             }
-            User existUserName = userRepository.findByUser(fullName);
+            User existUserName = userRepository.findByFullName(fullName);
             if (existUserName != null && !existUserName.getId().equals(id)) {
                 modelMap.addAttribute(Const.ERROR_REGISTER, Const.FULLNAME_ERROR);
                 return Const.ROUTEER_UPDATE_STAFF;
