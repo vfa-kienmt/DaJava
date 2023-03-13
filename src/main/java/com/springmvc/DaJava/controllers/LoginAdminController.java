@@ -1,9 +1,9 @@
-package com.springmvc.demo.controllers;
+package com.springmvc.DaJava.controllers;
 
-import com.springmvc.demo.count.Const;
-import com.springmvc.demo.count.HashedPassword;
-import com.springmvc.demo.models.User;
-import com.springmvc.demo.repositories.UserRepository;
+import com.springmvc.DaJava.count.Const;
+import com.springmvc.DaJava.count.HashedPassword;
+import com.springmvc.DaJava.models.User;
+import com.springmvc.DaJava.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpSession;
-import java.util.List;
 
 @Controller
 @RequestMapping(path = "/admin")

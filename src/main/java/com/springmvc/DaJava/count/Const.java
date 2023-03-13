@@ -1,4 +1,4 @@
-package com.springmvc.demo.count;
+package com.springmvc.DaJava.count;
 
 public class Const {
     public static String SESSION_LOGIN_ADMIN = "login_admin";

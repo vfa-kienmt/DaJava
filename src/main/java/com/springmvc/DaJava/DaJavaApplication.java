@@ -1,11 +1,11 @@
-package com.springmvc.demo;
+package com.springmvc.DaJava;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DemoApplication {
+public class DaJavaApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(DaJavaApplication.class, args);
 	}
 }

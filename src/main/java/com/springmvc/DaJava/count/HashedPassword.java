@@ -1,4 +1,4 @@
-package com.springmvc.demo.count;
+package com.springmvc.DaJava.count;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 

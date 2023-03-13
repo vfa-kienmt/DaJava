@@ -1,6 +1,6 @@
-package com.springmvc.demo.repositories;
+package com.springmvc.DaJava.repositories;
 
-import com.springmvc.demo.models.User;
+import com.springmvc.DaJava.models.User;
 import org.springframework.data.repository.CrudRepository;
 
 public interface UserRepository extends CrudRepository<User, Integer> {

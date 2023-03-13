@@ -1,4 +1,4 @@
-package com.springmvc.demo;
+package com.springmvc.DaJava;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

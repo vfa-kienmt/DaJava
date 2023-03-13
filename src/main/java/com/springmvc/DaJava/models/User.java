@@ -1,6 +1,4 @@
-package com.springmvc.demo.models;
-
-import org.hibernate.annotations.CollectionId;
+package com.springmvc.DaJava.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
